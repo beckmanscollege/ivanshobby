@@ -18,207 +18,372 @@ Yada, yada. Let's get on with it.
 
     <title>Ivan's Hobby</title>
 
-<!-- Bibliotekimport ----------------------------------------------------->
+    <!-- Bibliotekimport ----------------------------------------------------->
 
     <link rel="stylesheet" href="/style.css" />
   </head>
 
-
   <body>
 
-<!-- Grid 1 -->
-
+<!---- Startsida --->
+<!---- Gridsystem --->  
+    
     <div class="grid">
       
-<!-- Grid Items ---------------------------------------------------------->
+<!---- Grid Items (Grid 1) --->
 
       <div class="g1">
-        <h1>
+        <h1 id="h1start">
           Find Ivan's Hobby
         </h1>
-        <h2>
+        <h2 id="h2start">
           A hobby a day keeps the doldrums away.
         </h2>
-      </div>
-
-      <div class="g2">
-        <button class="btn1" onclick="sidbyte1()">
-          Click to start.
-        </button>
-
-        <div class="g3"></div>
-      </div>
-    </div>
-
-<!--- Grid 3 ------------------------------------------------------------>
-
-<!--- Here's where the user learns basic focus areas of Ivan's life --->
-
-  <div class="grid4" onhover>
-    <div class="g14">
-      <h1 id="silverink">
-        Scratch-o-Facto!
-      </h1>
-    </div>
-    
-<!--- Instruktioner ------------------------------------------------------------>
-    
-    <div class="g15">
-      <h2>
-        ⓵ Ink out the blur from each box.
-      </h2>
-      <h2>
-        ⓶ Behind are pertinent facts about Ivan.
-      </h2>
-    </div>
-    <div class="g16">
-      <h2>
-        ⓷ Pick three facts that you think are interesting for his hobby.
-      </h2>
-      <h2>
-        ⓸ Move on to the next step.
-      </h2>
-    </div>
-    
-<!--- Vidareknapp ------------------------------------------------------------>
-
-    <div class="g26">
-      <h2 class="moveon" onclick="sidbyte2()">"Click here to move on when you're ready."</h2>
-    </div>
-    
-<!--- Faktarutor ------------------------------------------------------------>
-
-    <div class="g17">
-      <h2>
-        Fact #1
-      </h2>
-      <h3 class="blur">
-        《 He is a full-time student 》
-      </h3>
-    </div>
-    <div class="g18">
-      <h2>
-        Fact #2
-      </h2>
-      <h3 class="blur">
-        《 He is pretty tall and lankey 》
-      </h3>
-    </div>
-    <div class="g19">
-      <h2>
-        Fact #3
-      </h2>
-      <h3 class="blur">
-        《 He has a girlfriend since a couple of years 》
-      </h3>
-    </div>
-    <div class="g20">
-      <h2>
-        Fact #3
-      </h2>
-      <h3 class="blur">
-        《 He is well versed in the graphic design field 》
-      </h3>
-    </div>
-    <div class="g21">
-      <h2>
-        Fact #4
-      </h2>
-      <h3 class="blur">
-        《 He is most likely middle class 》
-      </h3>
-    </div>
-    <div class="g22">
-      <h2>
-        Fact #4
-      </h2>
-      <h3 class="blur">
-        《 He eats meat and drinks alcohol 》
-      </h3>
-    </div>
-    <div class="g23">
-      <h2>
-        Fact #5
-      </h2>
-      <h3 class="blur">
-        《 He is probably left of center politically 》
-      </h3>
-    </div>
-    <div class="g24">
-      <h2>
-        Fact #6
-      </h2>
-      <h3 class="blur">
-        《 He is seen as inclusive, caring and helpful by peers 》
-      </h3>
-    </div>
-    <div class="g25">
-      <h2>
-        Fact #7
-      </h2>
-      <h3 class="blur">
-        《 He is 27 years of age 》
-      </h3>
-    </div>
-  </div>
-  
-<!--- Grid 5 ------------------------------------------------------------>
-  
-  <div class="grid5">
-    <div class="g27">
-      <h1 id="thexfactor">
-      The X Factors
-      </h1>
-    </div>
-    <div class="g28">
-      <h2>
-      Below are a few scenarios.
-      </h2>
-    
-    </div>
-       <div class="g29">
+        <div id="startbutton" onclick="start()">
          <h2>
-           What would Ivan do?
-         </h2>
-       </div>
-    <div class="g30">
-      <h2>
-        ⓵ Read said scenario.
-      </h2>
-       </div>
-      <div class="g31" onclick="sida5()">
-      <h2>
-        ⓶ Choose one out of four types of reactions.
-      </h2>
-       </div>
-       <div class="g32">
-         <div class="g32q">
-          <h2 id="scenario">
-          "The Stop And Chat"
-           </h2>
-           <h3 id="scenarioq">
-             He's walking towards home, when he runs into an acquaintance, who on his polite question 'how are you'
-             goes into telling a long story about his or her weekend. <br> <br> <br> How does Ivan react?
-           </h3>
-         </div>
-         <div class="g32f">
-        <button class="btn8">
-          Politely listen to the whole story
-           </button>
-           <button class="btn8">Look at watch and manifest a time urgency.</button>
-        <button class="btn8">
-          Interrupt the person and ask for a raincheck.
-           </button>   
+           Click to start.
+          </h2>
         </div>
-       </div>
     </div>
+    </div>
+
+<!---- Formulär 1 --->
+<!---- F1: Fråga 1 --->
+
+    <form id="form1">
+      
+      <!--- OBS NEDAN HETER EGENTLIGEN FIELDSET ERSÄTT TILLBAKA OCH SLUT MED FIELDSET OCKSÅ I BOTTEN OM FEL --->
+      
+      <div class="grid2">
+      <div class="grid2header">
+        <div class="grid2title">
+          <h1 id="htitle">
+          <p id="ptitle">
+            <i>The Question(s) of...</i>
+            </p><br> ✺ Ivan's Hobby
+          </h1>
+        </div>
+        <div class="grid2instructions">
+          <h2 class="info">
+           <u> Instructions:</u>
+          </h2>
+          <h2 class="info">
+            ⓵ Below are facts about Ivan, read carefully.<br><br>
+            ⓶ Decide how you think this fact impacts his choice of hobby.
+          </h2>
+        </div>
+        <div class="grid2instructions2">
+          <h2 class="info">
+            <u>When you're done:</u>
+          </h2>
+          <h2 class="info">
+             ⓷ Make sure to tick all the boxes. <br><br>
+             ⓸ Press the bottom button to calculate a hobby for Ivan.
+          </h2>
+        </div>
+        </div>  
+      
+        <section id="q1">
+          <h2 class="qh2"><u>Question I:</u><br>Ivan is 187 centimeters. How does this impact his hobby?</h2>
+
+          <!---- <p>Svarsa</p>lternativ 1 --->
+          
+          <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+          
+          <div class="group" id="purple1">
+            <input type="radio" id="q1a1" name="q1" value="c" required />
+            <label for="q1a1"><span>Answer I</span>
+            <span class="aspan">He should assert his physical presence and choose any pasttime that gives him the opportunity to show of his lenghty limbs.</span>
+            </label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q1a2" name="q1" value="a" />
+            <label for="q1a2"><span>Answer II</span>
+            <span class="aspan">He should start a habit of being sensitive to his height advantage over other people, for example when reaching on a high shelf.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q1a3" name="q1" value="b" />
+            <label for="q1a3"><span>Answer III</span>
+            <span class="aspan">He should really consider his diet and plan for how he can reduce his height to the global male average of 176 centimeters.</span></label>
+          </div>
+        </section>
+        
+<!---- F1: Fråga 2 --->
+      
+        <section id="q2">          
+          <h2 class="qh2"><u>Question II:</u><br>How should Ivan's hobby distract him from his meaningful but stressful work as a designer?</h2>
+          
+          <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+          
+          <!---- Svarsalternativ 1 --->
+
+          <div class="group">
+            <input type="radio" id="q2a1" name="q2" value="b" required />
+            <label for="q2a1"><span>Answer I</span>
+            <span class="aspan">What helps against stress and anxiety better than gargling down on some heart-stopping festivities?</span></label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q2a2" name="q2" value="c" />
+            <label for="q2a2"><span>Answer II</span>
+            <span class="aspan">Smashing like buttons are not going to help, this gentleman needs to smash records, world records that is. Achievement is all.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q2a3" name="q2" value="a" />
+            <label for="q2a3"><span>Answer III</span>
+            <span class="aspan">What helps against stress is coming up with a mantra, such as 'Serenity Now' or the like. He should practice breathing techniques and sit in hot rooms crosslegged.</span></label>
+          </div>
+        </section>
+        
+                  <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+        
+<!---- F1: Question VIII --->
+      
+        <section id="q3">          
+          <h2 class="qh2"><u>Question III:</u><br>Ivan is a caring and sensitive guy: how can he incorporate this into his after work activity?</h2>
+          
+<!---- Svarsalternativ 1 --->
+
+          <div class="group">
+            <input type="radio" id="q3a1" name="q3" value="c" required />
+            <label for="q3a1">
+            <span>Answer I</span>
+            <span class="aspan">He should shock his sensitive nerve system in cold, hot or suprisingly lukewarm weather.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q3a2" name="q3" value="b" />
+            <label for="q3a2"><span>Answer II</span>
+            <span class="aspan">He should really look into what other worlds he can connect to with his sensitivity, he may have 'The Gift'.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q3a3" name="q3" value="a" />
+            <label for="q3a3"><span>Answer III</span>
+            <span class="aspan">What's better for the caretaker than to learn how to cook a Carbonará: it warms the schmeckel and it is easily sharable on a large plate.</span></label>
+          </div>
+        </section>
+        
+                  <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+        
+<!---- F1: Question VIII ---> 
+      
+        <section id="q4">          
+          <h2 class="qh2"><u>Question IV:</u><br>Ivan lives in Stockholm, affect his choice of hobby?</h2>
+          
+          <!---- <p>Svarsa</p>lternativ 1 --->
+
+          <div class="group">
+            <input type="radio" id="q4a1" name="q4" value="b" required />
+            <label for="q4a1"><span>Answer I</span>
+            <span class="aspan">He should take advantage, do research, catch and eat all kinds of smoked and smelly fish.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q4a2" name="q4" value="a" />
+            <label for="q4a2"><span>Answer II</span>
+            <span class="aspan">He should reconnect and bide his time with the kindred spirits that are not seldom found roaming Fridhemsplan.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q4a3" name="q4" value="c" />
+            <label for="q4a3"><span>Answer III</span>
+            <span class="aspan">Regardless of where he is, all he needs is a good 20.000 kr bike and he can roam any terrain and eight months of darkness.</span></label>
+          </div>
+        </section>
+        
+                  <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+        
+<!---- F1: Question VIII ---> 
+      
+        <section id="q5">          
+          <h2 class="qh2"><u>Question V:</u><br>Ivan does not like to stop and chat with distant friends on the street. What does that say about his choice of hobby?</h2>
+          
+          <!---- <p>Svarsa</p>lternativ 1 --->
+
+          <div class="group">
+            <input type="radio" id="q5a1" name="q5" value="c" required />
+            <label for="q5a1"><span>Answer I</span>
+            <span class="aspan">Easy. His hobby should include carrying around lots of bulky items, this way no one will talk to him for too long, weighing him down.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q5a2" name="q5" value="a" />
+            <label for="q5a2"><span>Answer II</span>
+            <span class="aspan">Most certainly, he should attend to something that grows his comfort zone: definitely someting that includes speaking in tongues.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q5a3" name="q5" value="b" />
+            <label for="q5a3"><span>Answer III</span>
+            <span class="aspan">Ivan is missing out on a great opportunity: had he been well versed in the properties of garlic for example, he could have one before going out.</span></label>
+          </div>
+        </section>
+        
+                  <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+        
+        
+<!---- F1: Question VIII ---> 
+      
+        <section id="q6">          
+          <h2 class="qh2"><u>Question VI:</u><br>Ivan is 183 centimeters. How does this impact his hobby?</h2>
+          
+          <!---- <p>Svarsa</p>lternativ 1 --->
+
+          <div class="group">
+            <input type="radio" id="q6a1" name="q6" value="b" required />
+            <label for="q6a1"><span>Answer I</span>
+            <span class="aspan">He should really consider his diet and plan for how he can reduce his height to the global male average of 176 centimeters.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q6a2" name="q6" value="a" />
+            <label for="q6a2"><span>Answer II</span>
+            <span class="aspan">He should really consider his diet and plan for how he can reduce his height to the global male average of 176 centimeters.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q6a3" name="q6" value="c" />
+            <label for="q6a3"><span>Answer III</span>
+            <span class="aspan">He should really consider his diet and plan for how he can reduce his height to the global male average of 176 centimeters.</span></label>
+          </div>
+        </section>
+        
+                  <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+        
+<!---- F1: Question VIII ---> 
+      
+        <section id="q7">          
+          <h2 class="qh2"><u>Question VII:</u><br>Ivan's friends are busybodies, yuppies and all the likes. How can his hobby help him meet new people?</h2>
+          
+          <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 1 --->
+
+          <div class="group">
+            <input type="radio" id="q7a1" name="q7" value="a" required />
+            <label for="q7a1"><span>Answer I</span>
+            <span class="aspan">He could look for communities that are not superficial: some that do non-verbal communication, perhaps with long non-erotic hugs.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q7a2" name="q7" value="c" />
+            <label for="q7a2"><span>Answer II</span>
+            <span class="aspan">If he's tired of yuppies, he should try besting a wooden trail, there are no urban neoliberals where there is no 4G connection.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q7a3" name="q7" value="b" />
+            <label for="q7a3"><span>Answer III</span>
+            <span class="aspan">The most down to earth people? Salt-of-the-Earth-kinda-guys. Start growing everything by yourself and soon you will be all by yourself.</span></label>
+          </div>
+        </section>
+        
+                  <!-- A = Spirituality, B = Cooking, C = Triathlon // -->
+
+        
+<!---- F1: Question VIII ---> 
+      
+        <section id="q8">          
+          <h2 class="qh2"><u>Question VIII:</u><br>Lastly: why should he even have a hobby, in your opinion?</h2>
+          
+          <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 1 --->
+
+          <div class="group">
+            <input type="radio" id="q8a1" name="q8" value="c" required />
+            <label for="q8a1"><span>Answer I</span>
+            <span class="aspan">To get ripped, cash in checks and get bassed.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 2 --->
+
+          <div class="group">
+            <input type="radio" id="q8a2" name="q8" value="b" />
+            <label for="q8a2"><span>Answer II</span>
+            <span class="aspan">So that he can spend less time with people and more time with sauerkraut.</span></label>
+          </div>
+          
+            <!---- <p>Svarsa<br><br></p><p><br><br>He should try to use his physicality, he sounds like a gladiator: something athletic for sure.</p>lternativ 3 --->
+
+          <div class="group">
+            <input type="radio" id="q8a3" name="q8" value="a" />
+            <label for="q8a3"><span>Answer III</span>
+            <span class="aspan">In order for his chakras to align and find out the truth about vaccines.</span></label>
+          </div>
+        </section>
+        
+<!---- Submitknapp Formulär 1 --->
+
+        <button type="submit" form="form1" id="submit"><h2>Press To Calculate Ivan's Hobby</h2></button>
+      </div>
+    </form>
+    
+<!---- Slut formulär 1 --->
+<!---- Formulär 2 --->
+    
+    
+    
+    
+    
+    
+<!---- Gömd resultat-div --->
+    
+    <div id="result" class="hidden">
+    </div>
+            
+    <button id="btnSendEmail" onclick="sendEmail()" disabled>
+      Send your hobby finding to Ivan's email.
+    </button>
+          
+  
+    
+
+
+<!---- Fötter --------------------------------------------------------------------->
+
+    <footer>
+      Programmed by Eliot Axelsson, BFA Student @ Beckmans College of Design <br> (Credit to Jonas Johansson)
+    </footer>
   </body>
-
-  <footer>
-    Programmed by Eliot Axelsson, BFA Student @ Beckmans College of Design
-  </footer>
-
+  
 <!--- Skript ------------------------------------------------------------>
 
   <script src="/script.js" defer></script>
+  
 </html>

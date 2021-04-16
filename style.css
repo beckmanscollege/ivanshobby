@@ -1,1068 +1,663 @@
-/* Grundelement */
+/*************** Grundelement */
 
-cursor: url('path-to-image.png'), auto;	
-
-
-html {
-  
+section,
+button,
+fieldset,
+label,
+footer {
+  text-align: center;
+  color: #fe7b52;
+  font-family: "Junicode";
+  font-size: 15pt;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #fe7b52;
 }
 
 body {
-  background: #61ef64;
+  box-shadow: inset 10vw 10vh 10vw #fe7b52;
+  background: #fe7b52;
   margin: 1%;
 }
 
-footer {
-  color: #61ef64;
-  font-family: 'Junicode';
-  font-style: italic;
-  margin: 1%;
-  text-align: center;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #61ef64;
-}
-
-head {
-  
-}
-
-form {
-  background: white;
-  border: 1px solid #61ef64;
-  color: #61ef64;
+button#btnSendEmail {
+  visibility: hidden;
+  margin-bottom: 5%;
+  box-shadow: inset 0.5vw 0.5vh 0.5vw #fe7b52;
+  margin-left: 25%;
+  color: #fe7b52;
+  background-color: white;
   font-size: 25pt;
-  font-family: 'Junicode';
-  line-height: 19vh;
+    -webkit-text-stroke-color:  #fe7b52;
   -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #61ef64;
 }
 
-.vehicle1, .vechicle2, .vehicle3 {
-    border: 1px solid #61ef64;
-}
-
-/* Klasser */
-
-/* Knappar */
-
-.btn1, .btn2, .btn3, .btn4 {
-  background: #61ef64;
-  border: 1px solid white;
-  border-radius: 100%;
-  box-shadow: 1vw 2vh 1vw #61ef64;
+button#btnSendEmail:hover {
+  box-shadow: inset 0.5vw 0.5vh 0.5vw white;
+  margin-left: 25%;
   color: white;
-  font-size: 12pt;
-  font-family: 'Junicode';
-  text-align: center;
-  width: 15vw; height: 10vh;
-  -webkit-text-stroke-width: 1.5px;
+  background-color: #fe7b52;
   -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1.5px;
 }
 
-.btn5, .btn6 {
-  background: white;
-  border: 1px solid #61ef64;
+section {
+  box-shadow: inset 1vw 2vh 1vw #fe7b52;
+}
+
+input:checked ~ label {
+  background: #fe7b52;
+  box-shadow: inset 1vw 2vh 1vw white;
   color: white;
-  font-family: 'Junicode';
-  text-align: center;
-  -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1.5px;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+}
+
+label,
+label span {
+  font-family: "Junicode";
+  font-style: normal;
+  font-size: 22pt;
+  -webkit-text-stroke-width: 1px;
+}
+
+label {
+  background-color: white;
+  font-size: 25pt;
+  box-shadow: inset 1vw 2vh 1vw #fe7b52;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 0.3fr);
+}
+
+label:hover {
+  width: 100%;
+  height: 100%;
+  background: #fe7b52;
+  box-shadow: inset 1vw 2vh 1vw white;
+  color: white;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1.5px;
+}
+
+label span { 
+  text-decoration: underline;
+  margin-right: 10%;
+  margin-top: 15%;
+  grid-column-start: 1;
   grid-row-start: 1;
-  grid-row-end: 1;
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
+  width: 100%;
+  text-align: center
 }
 
-.btn1 {
-  margin-left: 15%;
-}
-
-.btn2 {
+label span.aspan {
+  text-decoration: none;
   grid-column-start: 2;
-  grid-column-end: 2;
+  grid-row-start: 2;
+  margin-top: 10%;
 }
 
-.btn3 {
+
+section {
   grid-column-start: 1;
-  grid-column-end: 1;
-  
+  grid-column-end: 5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.btn4 {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start 3;
-  grid-row-end: 4;
-}
-
-.btn5 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  font-size: 35pt;
-}
-
-.btn6 {
-  grid-column-start: 2;
-  grid-column-end: 2; 
-  font-size: 35pt;
-  
-}
-
-/* Övrigt */
-
-.explaination {
-  margin-top: 22%;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
+/*************** Gridsystem */
 
 /* Grid 1 */
 
-
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 5(1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
   background: white;
   border: solid 1px white;
   border-radius: 100%;
   animation: boxskugga 10s ease infinite;
-
+  margin-bottom: -15%;
 }
 
 .g1 {
-  margin: 15%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, 0.5fr);
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 5;
+  visibility: visible;
+}
+
+#h1start {
+  font-size: 100pt;
+  margin-top: 10%;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  text-align: center;
+   -webkit-text-stroke-color: #fe7b52;
+  -webkit-text-stroke-width: 10px;
+  text-shadow: 2vw 1vh 3vw #fe7b52;
+}
+
+
+#h2start {
+  padding: 0%;
+}
+
+#startbutton {
+  animation: textknas 3s infinite;
+  margin-top: -10%;
+  margin-bottom: 25%;
+  margin-left: 40%;
+  grid-column-start: 2;
+  grid-row-start: 3;
 }
 
 .g2 {
-  margin: 15%;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 4;
   grid-row-end: 4;
+  visibility: visible;
 }
 
-/* Grid 2 */
+.grid2,
+.grid2header,
+.grid2title,
+.grid2instructions,
+.grid2instructions2 {
+  border: 1px solid #fe7b52;
+  box-shadow: inset 1vw 2vh 1vw #fe7b52;
+}
 
+.grid2header {
+  margin-bottom: 0%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  text-align: center;
+  background: white;
+}
 
 .grid2 {
-  animation: boxskugga 10s ease infinite;
-  background: white;
-  border: solid 1px #61ef64;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4(1fr);
-  margin-left, margin-right, margin-bottom: 5%;
-  visibility: hidden;
+  animation: boxskugga 10s infinite;
+  margin: 3%;
   display: none;
-}
-
-.g6, .g7, .g8, .g9, .g10 {
-  border: 1px solid #61ef64; 
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-}
-
-.g5 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  margin-bottom: 10%;
-  text-align: center;
-}
-
-.g6 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
-.g7 {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
-.g8 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g9 {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g10 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  visibility: hidden;
-}
-
-/* Grid 3 */
-
-.grid3 {
-  /*display: grid;*/
-  display: grid;
-  animation: boxskugga 10s ease infinite;
-  background: white;
-  border: solid 1px #61ef64;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  margin-left, margin-right, margin-bottom: 5%;
-}
-
-.g11, .g11i2, .g12, .g12i2, .g13, .g14 {
-  border: solid 1px #61ef64;
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-
-}
-
-.g11 {
-  /*display: grid;*/
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-.g11i1 {
-  grid-column-start: 2;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  
-}
-
-.g11i2 {
-  grid-column-start: 2;
-  grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 6;
-}
-
-.g12 {
-  /*display: grid;*/
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-.g12i1 {
-  grid-column-start: 2;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.g12i2 {
-  grid-column-start: 2;
-  grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 6;
-  padding-bottom: 15%;
-}
-
-.g13 {
-  visibility: hide;
-  border-radius: 100%;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  margin: 5%;
-}
-
-/* Grid 4 */
-
-.grid4 {
-  animation: boxskugga 10s ease infinite;
-  display: none;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 25vh 15vw;
-  
-}
-
-.g26 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 5;
-  grid-row-end: 5;
-}
-
-.g26:hover {
-  box-shadow: inset 1vw 1vh 2vw 2vh #61ef64;
-}
-
-.g14, .g15, .g16, .g17, .g18, .g19, .g20, .g21, .g22, .g23, .g24, .g25, .g26{
-  background: white;
-  box-shadow: 1vw 2vh 1vw #61ef64;
-  border: solid 1px #61ef64;
-
-}
-
-.g14, .g15, .g16 {
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-}
-
-.g17:hover, .g18:hover, .g19:hover, .g20:hover, .g21:hover, .g22:hover, .g23:hover, .g24:hover, .g25:hover {
-  background: white;
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-  border: solid 1px #61ef64;
-  animation: expansion 5s ease;
-
-}
-
-h2.moveon {
-  font-size: 45pt;
-  animation: flyta 3s infinite;
-}
-
-
-
-h3.blur {
-  margin-top: 10%;
-  font-size: 20pt;
-  filter: blur(10px);
-}
-
-h3.blur:hover {
-  margin-top: 10%;
-  animation: blurrat 2s ease;
-}
-
-/* Grid 5 */
-
-.grid5 {
-  animation: boxskugga 10s ease infinite;
-  display: none;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 10vh 10vw;
-}
-
-.g27, .g28, .g29, .g30, .g31, .g32, .g33, .g34, .g35 {
-  background: white;
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-  border: solid 1px #61ef64;
-}
-
-.g27 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-.g28 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g29 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g30 {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g31 {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g32 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 8;
-}
-
-.g32f {
-  display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-}
-
-.g33 {
-  display: none;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 5;
-  grid-row-end: 8;
-}
-
-.g34 {
-  display: none;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 6;
-  grid-row-end: 7;
-
-}
-
-.g32f,.g33f,.g34f {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 8;
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-  text-align: center;
-}
-
-/* Grid 6 */
-
-.grid6 {
-  display: none;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr 0.1fr 1fr 1fr;
-  animation: boxskugga 10s ease infinite;
-
-}
-
-.g35, .g36, .g37, .g38, .g39, .g40 {
   background: white;
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-  border: solid 1px #61ef64;
-
-}
-
-.g36, .g37, .g38, .g39 {
-  box-shadow: inset 0.5vw 0.5vh 1vw 1vh #61ef64;
-}
-
-.g35 {
   grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
-.g36 {
-  padding-top: 10%;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
-.g37 {
-  display: grid;
-  grid-template-columns: repeat(25, 1fr);
-  grid-template-rows: repeat(25, 1vh 1vw);
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 7;
-}
-
-.g38 {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
-.g39, .g40, .g41, .g42, .g43, .g44, .g45, .g46, .g47, .g48, .g49, .g50 {
-  border: solid 1px #61ef64;
-  box-shadow: inset 0.1vw 0.1vh 0.1vw 0.1vh #61ef64;
-  background: white;
-
+.hidden {
+  display: none;
 }
 
-/* Startpunkt */
-
-.g39 {
-  grid-column-start: 12;
-  grid-column-end: 13;
-  grid-row-start: 12;
-  grid-row-end: 13;
-  border-radius: 100%;
+.group {
+  border: 1px solid #fe7b52;
 }
 
-
-.g40 {
-  grid-column-start: 3;
-  grid-column-end: 9;
-  grid-row-start: 12;
-  grid-row-end: 16;
+.group input {
+  display: none;
 }
 
-.g41 {
+.navbutton {
+}
+
+.qh2 {
+  margin: 33%;
+  word-wrap: break-word;
+}
+
+/* ID Knappar */
+
+#btnSendEmail {
+  background-color: white;
+  width: 50%;
+}
+
+/* ID Formulär */
+
+#form1,{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+
+/* ID Knappar */
+
+button#submit {
+  border: 1px solid #fe7b52;
+  box-shadow: inset 0.5vw 0.5vh 0.5vh #fe7b52;
+  background-color: white;
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 3;
+  color: #fe7b52;
 }
 
-.g42 {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g43 {
-  grid-column-start: 6;
-  grid-column-end: 7;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g44 {
-  grid-column-start: 7;
-  grid-column-end: 8;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g45 {
-  grid-column-start: 8;
-  grid-column-end: 9;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g46 {
-  grid-column-start: 9;
-  grid-column-end: 10;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g47 {
-  grid-column-start: 10;
-  grid-column-end: 11;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g48 {
-  grid-column-start: 11;
-  grid-column: 12;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g49 {
-  grid-column-start: 12;
-  grid-column-end: 13;
-  grid-row-start: 3;
-  grid-row-end: 3;
-}
-
-.g50 {
-  grid-column-start: 13;
-  grid-column-end: 14;
-  grid-row-start: 3;
-  grid-row-start: 3;
-}
-
-/* Grid 7 */
-
-.grid7 {
-  animation: boxskugga 10s ease infinite;
-  display: grid;
-  grid-template-columns: repeat(1fr, 1fr);
-  grid-template-rows: repeat(5, 7vh 6vw);
-}
-
-.g51 {
-  background: white;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-/* IDs */
-
-#h2next {
-  animation: fejdin 5s infinite, boxskugga 5s infinite;
-  font-size: 35pt;
-}
-
-#explaination {
-  margin-top: 32%;
-  background-color: #61ef64;
-  box-shadow: 1vw 2vh 1vw #61ef64;
-  color: white;
-  font-size: 32pt;
-  margin-bottom: -5%;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white; 
-}
-
-#question {
-  padding: 10%;
-  margin-left: 35%;
-  margin-right: 35%;
-  background: white;
-  border: solid 1px #61ef64;
-  border-radius: 50%;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
-#silverink, .g15, .g16 {
-  margin-top: 13%;
-  font-size: 35pt;
-}
-
-#thexfactor {
-  font-size: 66pt;
-}
-
-#scenario {
+button#submit:hover {
   font-size: 25pt;
-  margin-top: 12%;
-}
-
-#scenarioq {
-  margin: 10%;
-  font-size: 18pt;
-  line-height: 22pt;
-}
-
-/* Elementklasser */
-
-/* Pseudoelement */
-
-/* ::after
-::before
-::first-letter
-::first-line
-::marker
-::selection */
-
-/* Pseudoklasser */
-
-a:link {
-  
-}
-
-a:visited {
-  
-}
-
-a:active {
-  
-}
-
-a:hover {
-  
-}
-
-.btn5:hover, .btn6:hover {
-  background-color: #61ef64;
-  border: 1px dashed #61ef64;
-  box-shadow: inset 1vw 1vh 1vw #61ef64;
-  color: white;
-  font-family: 'Junicode';
-  font-size: 35pt;
-  font-style: italic;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: white;
-}
-
-.btn8 {
+  color: #ffffff;
+  box-shadow: inset 0.8vw 0.8vh 0.8vh #fe7b52;
   background-color: white;
-  border: 1px solid #61ef64;
-  box-shadow: inset 1vw 1vh 1vw #61ef64;
-  color: #61ef64;
+}
+
+/* ID Divar */
+
+#result::before {
+  content: "And your result is: \00000a \00000a \00000a";
+  animation: textknas 3s infinite;
+  white-space: pre;
+  font-size: 55pt;
   font-family: 'Junicode';
-  font-size: 25pt;
-  font-style: italic;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #61ef64
-}
-
-.btn8:hover {
-  background-color: #61ef64;
-  border: 1px solid #61ef64;
-  box-shadow: inset 1vw 1vh 1vw white;
-  color: white;
-  font-family: 'Junicode';
-  font-size: 25pt;
-  font-style: italic;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: white;
-}
-
-button:hover {
-  background-color: white;
-  border: 1px dashed white;
-  box-shadow: inset 1vw 1vh 1vw #61ef64;
-  color: white;
-  font-family: 'Junicode';
-  font-size: 12pt;
-  font-style: italic;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #61ef64;
-}
-
-button:active {
-  background-color: white;
-  border: 1px dashed white;
-  box-shadow: inset 1vw 1vh 1vw #61ef64;
-  color: #61ef64;
-  font-family: 'Junicode';
-  font-size: 15pt;
-  font-style: italic;
-  transform: translateY(0.5vh);
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #61ef64;
-}
-
-.g6:hover, .g7:hover, .g8:hover, .g9:hover {
-  border: 1px solid #61ef64; 
-  background-color: #61ef64;
-  text-align: center;
-  
-}
-/* Design */
-
-/* Animation */
-
-@keyframes boxskugga {
-  
-  0% {
-    box-shadow: 10vw 10vh 10vw 10vh white;  }
-  
-  50% {
-    box-shadow: 2.5vw 2.5vh 2.5vw 2.5vh white;
-  }
-  
-  100% {
-    box-shadow: 10vw 10vh 10vw 10vh white;  }
-}
-
-@keyframes flyta {
-	0% {
-		transform: translatey(0vh);
-	}
-	50% {
-		transform: translatey(2vh);
-	}
-	100% {
-		transform: translatey(0vh);
-	}
-}
-
-@keyframes kantvidd {
-  0% {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
-  }
-  50% {
+  -webkit-text-stroke-color: #fe7b52;
   -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: white;
-  }
-  
-  100% {
+  text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+#result {
+  line-height: 65pt;
+  padding: 15%;
+  text-align: center;
+  font-size: 55pt;
+  color: #fe7b52;
+  font-family: 'AUTHENTIC Sans';
+  -webkit-text-stroke-color: #fe7b52;
+  -webkit-text-stroke-width: 9px;
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 0.5fr;
+  background: white;
+  border: solid 1px white;
+  border-radius: 100%;
+  animation: boxskugga 10s ease infinite, textknas2 6s ease infinite;
+}
+
+/*ID Frågor */
+
+/*************** Text */
+
+h1,
+h2,
+h3 {
+  color: #fe7b52;
+  -webkit-text-stroke-color: #fe7b52;
+}
+
+p {
+  float: left;
+  width: 33%;
+}
+
+#psubmit {
+  float: none;
+}
+
+h1 {
+  padding: 4.5%;
+  animation: flyta 4s ease-out infinite;
+  font-family: "AUTHENTIC Sans";
+  font-style: condensed;
+  font-size: 75pt;
+  -webkit-text-stroke-width: 5px;
+}
+
+h2 {
+  font-family: "Junicode";
+  font-style: bold condensed;
+  font-size: 22pt;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white; 
+}
+
+h3 {
+  font-family: "Junicode";
+  font-style: italic;
+  font-size: 16pt;
+  -webkit-text-stroke-width: 2px;
+}
+
+p {
+  font-family: "Junicode";
+  font-style: normal;
+  font-size: 22pt;
+  -webkit-text-stroke-width: 1px;
+}
+
+#ptitle {
+  border: 1px solid #fe7b52;
+  border-radius: 100%;
+  font-size: 20pt;
+  margin-left: 9%;
+  -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fe7b52;
+
+}
+
+#htitle {
+  -webkit-text-stroke-width: 7px;
+    -webkit-text-stroke-color: #fe7b52;
+  margin-top: 3%;
+  margin-right: 3%;
+}
+
+.info {
+  margin: 5%;
+  font-size: 32pt;
+}
+
+/* Animationer */
+
+@keyframes textknas2 {
+  0% {
+    font-size: 55pt;
+    font-style: italic;
+  }
+  25% {
+    font-size: 60pt;
+    font-style: normal;
+  }
+  50% {
+    font-size: 65pt;
+    font-style: bold;
+  }
+  75% {
+    font-size: 60pt;
+    font-style: normal;
+  }
+  100 {
+    font-size: 55pt;
+    font-style: italic;
+  }
+}
+
+@keyframes textknas {
+  0% {
+    text-decoration: underline;
+    text-decoration-color: #fe7b52;
+    text-decoration-thickness: 5px;
+  }
+  50% {
+    text-decoration: line-through;
+    text-decoration-color: #fe7b52;
+    text-decoration-thickness: 5px;
+
+
+  }
+  100% {
+    text-decoration: overline;
+    text-decoration-color: #fe7b52;
+    text-decoration-thickness: 5px;
   }
 }
 
 @keyframes fejdin {
-0% {
-  opacity:0;
+  0% {
+    opacity: 0;
   }
-100% {
-  opacity:1;
+  100% {
+    opacity: 1;
   }
 }
 
 @keyframes fejdut {
-0% {
-  opacity:1;
-  }
-50% {
-  opacity:0;
-  }
-100% {
-  opacity:1;
-  }
-}
-
-@keyframes blinka {
   0% {
-    background-color: #61ef64;
-    font-style: italic;
+    opacity: 1;
   }
   50% {
-    background-color: white;
-    color: #61ef64;
-    font-style: normal;
+    opacity: 0;
   }
   100% {
-    background-color: #61ef64;
-    font-style: italic;
+    opacity: 1;
   }
-}
-
-@keyframes expansion {
-  0% {
-  transform: scaleZ(1, 1);
-  z-index: 0;
-  }
-  100% {
-  transform: scaleZ(2, 2);
-  z-index: 1;
-
-}
 }
 
 @keyframes blurrat {
   0% {
-  filter: blur(initial);
+    filter: blur(initial);
+  }
+  20% {
+    filter: blur(0);
+  }
+  95% {
+    filter: blur(0);
   }
   100% {
-  filter: blur(0);  
+    filter: blur(initial);
+  }
+}
+
+@keyframes flyta {
+  0% {
+    transform: translatey(0vh);
+  }
+  50% {
+    transform: translatey(2vh);
+  }
+  100% {
+    transform: translatey(0vh);
+  }
+}
+
+@keyframes boxskugga {
+  0% {
+    box-shadow: 10vw 10vh 10vw 10vh white;
+  }
+
+  50% {
+    box-shadow: 2.5vw 2.5vh 2.5vw 2.5vh white;
+  }
+
+  100% {
+    box-shadow: 10vw 10vh 10vw 10vh white;
+  }
+}
+
+@keyframes snurra {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: center;
   }
 }
 
 /* Typografi */
 
-a {
-  
+/* Authentic Sans */
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-130.woff2?v=1617369765914")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-130.woff?v=1617369765461")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-p {
-  font-family: 'Junicode';
-  font-style: italic;
-  font-size: 12pt;
-  color: #61ef64;
-  text-align: center;
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed60.woff2?v=1617369767266")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed60.woff?v=1617369766912")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-h1 {
-  animation: flyta 10s infinite;
-  font-family: 'AUTHENTIC Sans';
-  font-style: condensed;
-  font-size: 80pt;
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-60.woff2?v=1617369763476")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-60.woff?v=1617369763290")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed130.woff2?v=1617369763722")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed130.woff?v=1617369763416")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-150.woff2?v=1617369766557")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-150.woff?v=1617369766234")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-90.woff2?v=1617369764964")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-90.woff?v=1617369764470")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed90.woff2?v=1617369768046")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed90.woff?v=1617369767571")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed150.woff2?v=1617369764131")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed150.woff?v=1617369763832")
+      format("woff");
   font-weight: 150;
-  color: #61ef64;
-  text-align: center;
-  -webkit-text-stroke-width: 6px;
-  -webkit-text-stroke-color: #61ef64;
-  
+  font-style: condensed;
+  font-display: swap;
 }
 
-h2 {
-  font-family: 'Junicode';
-  font-size: 17.5pt;
-  font-style: italic;
+/* Junicode */
+
+@font-face {
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldCondensed.woff2?v=1617369776461")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldCondensed.woff?v=1617369776054")
+      format("woff");
+  font-weight: bold;
+  font-style: condensed;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Italic.woff2?v=1617369778701")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Italic.woff?v=1617369779207")
+      format("woff");
   font-weight: normal;
-  color: #61ef64;
-  text-align: center;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #61ef64;
-}
-
-h3 {
-  
-  font-family: 'Junicode';
-  font-size: 40pt;
   font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalic.woff2?v=1617369777239")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalic.woff?v=1617369776870")
+      format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Bold.woff2?v=1617369776822")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Bold.woff?v=1617369775637")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-RegularCondensed.woff2?v=1617369776436")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-RegularCondensed.woff?v=1617369779411")
+      format("woff");
   font-weight: normal;
-  color: #61ef64;
-  text-shadow: 2vh 2vw 2vh 2vw #61ef64;
-  text-align: center;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #61ef64;
-}
-
-/* Fontface */
-
-      /* Authentic Sans */
-
-@font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-130.woff2?v=1617369765914') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-130.woff?v=1617369765461') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-style: condensed;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed60.woff2?v=1617369767266') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed60.woff?v=1617369766912') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode.woff2?v=1617369777620")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode.woff?v=1617369777535")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-60.woff2?v=1617369763476') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-60.woff?v=1617369763290') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalicCondensed.woff2?v=1617369777515")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalicCondensed.woff?v=1617369777288")
+      format("woff");
+  font-weight: bold;
+  font-style: italic, condensed;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed130.woff2?v=1617369763722') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed130.woff?v=1617369763416') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Junicode";
+  src: url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-ItalicCondensed.woff2?v=1617369778948")
+      format("woff2"),
+    url("https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-ItalicCondensed.woff?v=1617369778798")
+      format("woff");
+  font-weight: normal;
+  font-style: italic, condensed;
+  font-display: swap;
 }
-
-@font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-150.woff2?v=1617369766557') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-150.woff?v=1617369766234') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-90.woff2?v=1617369764964') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-90.woff?v=1617369764470') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed90.woff2?v=1617369768046') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed90.woff?v=1617369767571') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'AUTHENTIC Sans';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed150.woff2?v=1617369764131') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FAUTHENTICSans-Condensed150.woff?v=1617369763832') format('woff');
-    font-weight: 150;
-    font-style: condensed;
-    font-display: swap;
-}
-
-      /* Junicode */
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldCondensed.woff2?v=1617369776461') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldCondensed.woff?v=1617369776054') format('woff');
-    font-weight: bold;
-    font-style: condensed;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Italic.woff2?v=1617369778701') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Italic.woff?v=1617369779207') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalic.woff2?v=1617369777239') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalic.woff?v=1617369776870') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Bold.woff2?v=1617369776822') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-Bold.woff?v=1617369775637') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-RegularCondensed.woff2?v=1617369776436') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-RegularCondensed.woff?v=1617369779411') format('woff');
-    font-weight: normal;
-    font-style: condensed;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode.woff2?v=1617369777620') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode.woff?v=1617369777535') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalicCondensed.woff2?v=1617369777515') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-BoldItalicCondensed.woff?v=1617369777288') format('woff');
-    font-weight: bold;
-    font-style: italic, condensed;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Junicode';
-    src: url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-ItalicCondensed.woff2?v=1617369778948') format('woff2'),
-        url('https://cdn.glitch.com/3ae315e1-1101-444d-8e1b-9557021fd5fd%2FJunicode-ItalicCondensed.woff?v=1617369778798') format('woff');
-    font-weight: normal;
-    font-style: italic, condensed;
-    font-display: swap;
-}
-
-
-/* Mediaanpassning */
-
